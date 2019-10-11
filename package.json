@@ -1,0 +1,34 @@
+{
+  "name": "svelte-app",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@fullhuman/postcss-purgecss": "^1.3.0",
+    "autoprefixer": "^9.6.4",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.18",
+    "postcss-import": "^12.0.1",
+    "rollup": "^1.12.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^4.0.4",
+    "svelte": "^3.0.0",
+    "tailwindcss": "^1.1.2"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "autobuild": "rollup -c -w",
+    "dev": "run-p start:dev autobuild",
+    "start": "serve public",
+    "start:dev": "serve public"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
+}

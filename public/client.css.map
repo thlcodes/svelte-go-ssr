@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "client.css",
+  "sources": [
+    "../src/App.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  export let name;\n  \n  let red = true\n\n  let data = \"Loading ...\"\n\n  (async () => {\n    try {\n      let res = await fetch(\"https://baconipsum.com/api/?type=meat-and-filler\", [\"h1\"])\n      let json = await res.json()\n      data = json[0]\n    } catch(err) {\n      data = \"error: \" + err\n    }\n  })()\n</script>\n\n<style>\n\tinput {\n\t\tcolor: purple;\n\t}\n</style>\n\n\n<h1 class=\"bg-black text-red-200\" class:bg-red-100={red} class:text-green-500={red}>Hi {name}!</h1>\n<input bind:value={name} type=\"text\" disabled={false}/>\n<h2>{data}</h2>"
+  ],
+  "names": [],
+  "mappings": "AAmBC,KAAK,eAAC,CAAC,AACN,KAAK,CAAE,MAAM,AACd,CAAC"
+}
